@@ -63,3 +63,14 @@ bool Stack::isEmpty()
 {
     return (top < 0);
 }
+
+/* int main()
+{
+    Stack s;
+    s.push(10);
+    s.push(20);
+    s.push(30);
+    cout << s.pop() << " Popped from stack\n";
+
+    return 0;
+} */
