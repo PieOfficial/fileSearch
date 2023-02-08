@@ -5,10 +5,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "dirent.h"
+#include "dirent.h" //Lib needed for searching
 
 using namespace std;
-
 
 
 /* when return 1, scandir will put this dirent to the list */
@@ -32,7 +31,7 @@ static int parse_ext(const struct dirent *dir)
 
 int main(int argc, char *argv[])
 {
-	       struct dirent **namelist;
+	     struct dirent **namelist;
        int n;
 
        n = scandir(".", &namelist, parse_ext, alphasort);
@@ -46,7 +45,7 @@ int main(int argc, char *argv[])
         //  myfile.open (namelist[n]->d_name);
         //  myfile << "Writing this to a file.\n";
         //  myfile.close();
-               printf("%s\n", namelist[n]->d_name);
+               printf("%s\n", namelist[n]->d_name); //Print the file name
 			   
                free(namelist[n]);
            }
